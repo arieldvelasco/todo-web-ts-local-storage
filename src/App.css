@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0rem;
+    text-align: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+main {
+    border: 2px solid #333;
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 800px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.todo-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input-label {
+    display: inline-block;
+    padding: 0.5rem;
+    height: 2rem;
+    border: 2px solid #fff;
+    border-radius: 0.5rem 0rem 0rem 0.5rem; /*TL TR BR BL*/
+    display: flex;
+    align-items: center;
+}
+
+.todo-input-text {
+    padding: 0.5rem;
+    height: 2rem;
+    width: 50%;
+    border: 2px solid #fff;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.todo-input-btn {
+    display: inline-block;
+    padding: 0.5rem;
+    height: 2rem;
+    border: 2px solid #fff;
+    border-radius: 0rem 0.5rem 0.5rem 0rem; /*TL TR BR BL*/
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
