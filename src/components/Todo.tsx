@@ -1,14 +1,9 @@
 // Dependencies
 import { useState } from "react"
 
-// Types
-import { TodoType } from "../types/todo"
-
 // Icons
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
-
-
 
 interface TodoProps {
     id:string,

@@ -1,4 +1,7 @@
+// Dependencies
 import { TodoType } from "../types/todo"
+
+// Components
 import Todo from "./Todo"
 
 interface TodoListProps {
