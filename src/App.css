@@ -37,20 +37,19 @@ main {
 }
 
 .todo-input-label {
-    display: inline-block;
-    padding: 0.5rem;
-    height: 2rem;
+    height: 3rem;
+    width: 5rem;
     border: 2px solid #fff;
     border-radius: 0.5rem 0rem 0rem 0.5rem; /*TL TR BR BL*/
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .todo-input-text {
-    padding: 0.5rem;
-    height: 2rem;
+    height: 3rem;
     width: 50%;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 }
 
 .btn {
@@ -58,13 +57,13 @@ main {
 }
 
 .todo-input-btn {
-    display: inline-block;
-    padding: 0.5rem;
-    height: 2rem;
+    height: 3rem;
+    width: 5rem;
     border: 2px solid #fff;
     border-radius: 0rem 0.5rem 0.5rem 0rem; /*TL TR BR BL*/
     background-color: #333;
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
