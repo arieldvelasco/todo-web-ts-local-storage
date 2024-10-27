@@ -8,6 +8,9 @@ import { MdDeleteForever } from "react-icons/md";
 import { TiCancel } from "react-icons/ti";
 import { FaRegSquareCheck } from "react-icons/fa6";
 
+// Elements
+import Checkbox from "../elements/Checkbox/Checkbox";
+
 interface TodoProps {
     id:string,
     title: string,
@@ -23,11 +26,12 @@ const Todo: React.FC<TodoProps> = ({ id, title, completed, onCompleteTodo, onEdi
     const [ newTitle, setNewTitle ] = useState<string>(title)
     
     return (
-        <div >
+        <div  >
             {
                 editState ? (
-                    <div>
+                    <div className="todo-item" >
                         <input
+                            className="todo-item-text"
                             type="text"
                             value={ newTitle }
                             onChange={ (e) => setNewTitle(e.target.value) }
@@ -37,6 +41,7 @@ const Todo: React.FC<TodoProps> = ({ id, title, completed, onCompleteTodo, onEdi
                             }}}
                         />
                         <button
+                            className="btn btn-danger"
                             onClick={
                                 () => {
                                     setEditState(false)
@@ -47,6 +52,7 @@ const Todo: React.FC<TodoProps> = ({ id, title, completed, onCompleteTodo, onEdi
                                 <TiCancel />
                         </button>
                         <button
+                            className="btn btn-success"
                             onClick={ () => {
                                 onEditTodo(id, newTitle)
                                 setEditState(false)
@@ -56,24 +62,23 @@ const Todo: React.FC<TodoProps> = ({ id, title, completed, onCompleteTodo, onEdi
                         </button>
                     </div>
                 ) : (
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="custom-switch"
+                    <div className="todo-item" >
+                        <Checkbox 
+                            id={ id }
                             checked={ completed }
-                            onChange={ 
-                                () => onCompleteTodo(id)
-                            }
+                            onCompleteTodo={ onCompleteTodo }
                         />
-                        <span>
+                        <span className={` ${completed ? 'completed' : ''} todo-item-text`} >
                             {title}
                         </span>
                         <button
+                            className="btn btn-warning"
                             onClick={ () => setEditState(true) }
                         >
                             <FaEdit />
                         </button>
                         <button
+                            className="btn btn-danger"
                             onClick={ () => onDeleteTodo(id) }
                         >
                             <MdDeleteForever />
